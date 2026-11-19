@@ -4,8 +4,8 @@ import { typst } from 'astro-typst';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fai-upsa.github.io",
-  base: "thesis-guide",
+  site: process.env.PAGES_ORIGIN || undefined,
+  base: process.env.PAGES_BASE_PATH || '/',
   integrations: [typst()],
   vite: {
     ssr: {

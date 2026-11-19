@@ -12,7 +12,7 @@ bun run astro dev --background
 bun run astro dev status
 ```
 
-Open the server URL under `/thesis-guide/`. Use `bun run astro dev stop` to stop the development server.
+Open the server URL at its root. Use `bun run astro dev stop` to stop the development server.
 
 ## Edit the guide
 
@@ -27,3 +27,5 @@ bun run build
 ```
 
 The static output in `dist/` contains both HTML pages and `thesis-guide.pdf`. The build uses the Node Typst compiler dependency, so contributors and CI can build without installing the Typst CLI separately.
+
+For deployments, GitHub Actions reads the Pages origin and base path before building the site. Local and pull request builds default to `/`.
