@@ -1,23 +1,72 @@
+---
+const { title } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const home = `${base}/`;
+const typst = `${base}/typst/`;
+const current = Astro.url.pathname.replace(/\/$/, '');
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href={`${base}/favicon.ico`} sizes="any" />
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+    <title>{title} | FAI · UPSA</title>
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <a class="brand" href={home}>FAI · UPSA</a>
+        <nav aria-label="Thesis guide">
+          <a href={home} aria-current={current === base ? 'page' : undefined}>Overview</a>
+          <a href={typst} aria-current={current === typst.slice(0, -1) ? 'page' : undefined}>Typst</a>
+        </nav>
+        <a class="download" href={`${base}/thesis-guide.pdf`} download>Download PDF</a>
+      </div>
+    </header>
+    <main>
+      <article><slot /></article>
+      <footer>
+        {current === base
+          ? <a href={typst}>Continue to the Typst guide →</a>
+          : <a href={home}>← Return to the thesis overview</a>}
+      </footer>
+    </main>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  :root {
+    color: #192d2c;
+    background: #f8f7f2;
+    font-family: system-ui, sans-serif;
+    line-height: 1.65;
+  }
+  body { margin: 0; }
+  a { color: #00625a; text-underline-offset: .2em; }
+  header { border-bottom: 1px solid #d2ded8; background: #eef3ed; }
+  .bar {
+    max-width: 64rem;
+    padding: 1rem clamp(1rem, 5vw, 3rem);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem 1.5rem;
+  }
+  .brand { color: inherit; font-weight: 750; text-decoration: none; }
+  nav { display: flex; gap: 1rem; }
+  nav a[aria-current="page"] { font-weight: 700; }
+  .download { margin-inline-start: auto; }
+  main { max-width: 43rem; margin: auto; padding: clamp(2rem, 7vw, 5rem) 1.25rem 3rem; }
+  article h1, article h2 { font-family: Georgia, serif; line-height: 1.15; }
+  article h1 { margin: 0 0 1.25rem; font-size: clamp(2.5rem, 7vw, 4.5rem); }
+  article h2 { margin: 2rem 0 .6rem; font-size: 1.65rem; }
+  article p, article ul { margin: 0 0 1rem; }
+  article li + li { margin-top: .4rem; }
+  article pre { overflow: auto; background: #eaf0eb; padding: 1rem; border-radius: .35rem; }
+  footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #d2ded8; }
+  @media (max-width: 30rem) { .download { margin-inline-start: 0; } }
 </style>

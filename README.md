@@ -1,46 +1,29 @@
-# Astro Starter Kit: Basics
+# Thesis authoring guide
+
+The FAI · UPSA guide is an Astro site with a downloadable handbook. The overview covers planning and reviewing a thesis. The Typst page covers writing and exporting it and links to the official setup and syntax documentation.
+
+## Run locally
+
+Install the project dependencies with Bun using the Node version specified in `package.json`.
 
 ```sh
-bun create astro@latest -- --template basics
+bun install
+bun run astro dev --background
+bun run astro dev status
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Open the server URL under `/thesis-guide/`. Use `bun run astro dev stop` to stop the development server.
 
-## 🚀 Project Structure
+## Edit the guide
 
-Inside of your Astro project, you'll see the following folders and files:
+Edit `src/guides/overview.html.typ` for the introduction or `src/guides/typst.html.typ` for the Typst workflow. Astro imports each file into its corresponding page and renders it as semantic HTML. The handbook entry point, `src/guides/handbook.typ`, includes both files and applies the PDF page settings.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+To add a guide, create another `.html.typ` file, import it from an Astro route using the shared layout, and include it in the handbook. Update the site navigation so readers can find the new route. Keep print-specific sizing and page breaks in the handbook entry point. Typst's HTML export supports a subset of its print layout features, so check both formats when introducing new elements.
+
+## Build
+
+```sh
+bun run build
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The static output in `dist/` contains both HTML pages and `thesis-guide.pdf`. The build uses the Node Typst compiler dependency, so contributors and CI can build without installing the Typst CLI separately.
