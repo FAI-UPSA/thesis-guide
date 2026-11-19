@@ -1,0 +1,51 @@
+mit-latex:
+  type: web
+  title: The MIT thesis template in LaTeX
+  url:
+    value: https://web.mit.edu/thesis/tex/
+    date: 2026
+  author: Massachusetts Institute of Technology
+  language: en
+mit-thesis-specs:
+  type: web
+  title: MIT Specifications for Thesis Preparation
+  url:
+    value: https://libraries.mit.edu/distinctive-collections/thesis-specs/
+    date: 2026
+  author: Massachusetts Institute of Technology
+  language: en
+sydney-thesis-guide:
+  type: web
+  title: Preparing your thesis
+  url:
+    value: https://www.sydney.edu.au/research/graduate-research/current-students/thesis-and-examination/preparing-your-thesis.html
+    date: 2026
+  author: University of Sydney
+aalto-pdfa-guide:
+  type: web
+  title: Creating a PDF/A -compliant file of your thesis
+  url:
+    value: https://www.aalto.fi/en/services/creating-a-pdfa-compliant-file-of-your-thesis
+    date: 2026
+  author: Aalto University
+  language: en
+mit-thesis-modernization:
+  type: article
+  title: Modernizing MIT's thesis template
+  language: en
+  publisher: TeX Users Group
+  date: 2026-08-31
+  serial-number:
+    doi: 10.47397/tb/47-2/tb146lienhard-mitthesis
+  author: Lienhard, John
+  parent:
+    type: periodical
+    title: TUGboat
+    volume: 47
+    issue: 2
+    page-range: 212-221
+  url:
+    value: https://dspace.mit.edu/handle/1721.1/173917
+    date: 2026
+  abstract: |
+    A few years ago, I began an update to MIT’s LaTeX template for theses and dissertations. The previous template had been written in LaTeX 2.09 in the 1980s and patched for LaTeX 2𝜀 by various students during the 1990s. My work quickly turned into a complete rewrite. My goals were to use current LaTeX methods and to produce tagged PDF while still supporting users who have minimal knowledge of LaTeX and typesetting. In this note, I discuss some of the considerations that have shaped the current template, the implementation of tagging for non-standard document elements, rendering in HTML/CSS, and some aspects of expl3 coding.

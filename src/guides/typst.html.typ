@@ -1,29 +1,27 @@
-#title[Writing a thesis with Typst]
+Con Typst podés escribir los capítulos en archivos de texto plano y generar un PDF a medida que avanzás. Usá la #link("https://typst.app/")[aplicación web de Typst] o seguí las #link("https://github.com/typst/typst#installation")[instrucciones oficiales de instalación] para trabajar en tu equipo. En el #link("https://typst.app/docs/tutorial/")[tutorial oficial] vas a encontrar la sintaxis básica y ejemplos de formato.
 
-Typst lets you write chapters in plain-text source files and generate a PDF as you work. Use the #link("https://typst.app/")[Typst web app] or follow the #link("https://github.com/typst/typst#installation")[official installation instructions] for local editing. The #link("https://typst.app/docs/tutorial/")[official tutorial] covers basic syntax and formatting.
+= Organizá los capítulos
 
-= Organize chapters
-
-Keep a main file that applies your thesis formatting and includes the chapters in reading order. For example, create each file referenced below and put the corresponding chapter heading inside it.
+Usá un archivo principal para aplicar el formato de la tesis e incluir los capítulos en el orden de lectura. Para probar el ejemplo, creá los archivos que aparecen abajo y poné el encabezado del capítulo correspondiente en cada uno.
 
 ```typ
 #outline()
-#include "chapters/introduction.typ"
-#include "chapters/methods.typ"
-#include "chapters/results.typ"
-#include "chapters/conclusion.typ"
+#include "capitulos/introduccion.typ"
+#include "capitulos/metodologia.typ"
+#include "capitulos/resultados.typ"
+#include "capitulos/conclusiones.typ"
 ```
 
-= Manage references and figures
+= Gestioná las referencias y las figuras
 
-Store references in a BibLaTeX or Hayagriva file and load it with #link("https://typst.app/docs/reference/model/bibliography/")[`bibliography`]. Use citation keys as you write. Give figures labels and use #link("https://typst.app/docs/reference/model/ref/")[cross-references] so their numbering can follow the document.
+Guardá las referencias en un archivo BibLaTeX o Hayagriva y cargalo con #link("https://typst.app/docs/reference/model/bibliography/")[`bibliography`]. Usá las claves de cita a medida que escribís. Poneles etiquetas a las figuras y usá #link("https://typst.app/docs/reference/model/ref/")[referencias cruzadas] para que la numeración se actualice si cambia el orden.
 
-= Export a draft
+= Exportá un borrador
 
-Download the PDF from the web app, or run the following from your project folder if you work locally. Replace `thesis.typ` with the name of your main file.
+Descargá el PDF desde la aplicación web. Si trabajás en tu equipo, ejecutá este comando desde la carpeta del proyecto. Reemplazá `tesis.typ` por el nombre de tu archivo principal.
 
 ```sh
-typst compile thesis.typ
+typst compile tesis.typ
 ```
 
-Use the submission review on the guide home page when you check your final draft.
+Para revisar el borrador final, seguí los pasos de la sección «Revisá el PDF antes de entregar» de esta guía.

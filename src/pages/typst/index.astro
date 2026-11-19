@@ -1,8 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import TypstGuide from '../../guides/typst.html.typ';
+
+const title = 'Cómo escribir tu tesis con Typst';
 ---
 
-<Layout title="Writing a thesis with Typst">
+<Layout title={title}>
+  <h1>{title}</h1>
   <TypstGuide />
 </Layout>

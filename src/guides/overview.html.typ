@@ -1,17 +1,19 @@
-#title[Thesis authoring guide]
+#set document(title: [Guía para escribir tu tesis])
 
-Use this guide to plan, write, and review your thesis. Start by confirming your program's requirements with your supervisor, then choose a writing tool that lets you meet them.
+#title()
 
-= Before you start
+Usá esta guía para planificar, escribir y revisar tu tesis. Primero, confirmá con tu tutor los requisitos de tu carrera. Después, elegí una herramienta de escritura que te permita cumplirlos.
 
-- Collect the current instructions from your program. Confirm the required sections, citation style, formatting, and submission process.
-- Agree on a chapter outline and review schedule with your supervisor.
-- Keep your chapters, figures, and references together in a project folder you can back up.
+= Antes de empezar
 
-= Plan your manuscript
+- Reuní las pautas vigentes de tu carrera. Confirmá qué secciones tenés que incluir, qué estilo de citación y formato se piden y cómo se entrega la tesis.
+- Acordá con tu tutor un esquema de capítulos y un calendario de revisiones.
+- Guardá los capítulos, las figuras y las referencias en una misma carpeta y hacé una copia de respaldo.
 
-Map each chapter to a question your thesis needs to answer. Keep figures close to the discussion they support, and record source details as you read so you can verify citations while revising.
+= Planificá el manuscrito
 
-= Review the submission PDF
+Definí qué pregunta de tu tesis responde cada capítulo. Ubicá las figuras cerca del texto que las explica y anotá los datos de las fuentes a medida que leés, así podés verificar las citas al revisar el borrador.
 
-Compare the exported PDF with your program's checklist. Check the front matter, page numbering, figure captions, cross-references, and bibliography. Open the final file separately and confirm that all pages are present and legible.
+= Revisá el PDF antes de entregar
+
+Compará el PDF exportado con la lista de requisitos de tu carrera. Revisá las páginas preliminares, la numeración, los pies de figura, las referencias cruzadas y la bibliografía. Abrí el archivo final en un lector de PDF y comprobá que estén todas las páginas y que se lean bien.
