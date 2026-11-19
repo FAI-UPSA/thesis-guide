@@ -1,0 +1,16 @@
+version: 2
+
+updates:
+  - package-ecosystem: bun
+    directory: /
+    schedule:
+      interval: monthly
+    ignore:
+      - dependency-name: typescript
+        versions:
+          - ">= 7.0.0"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
