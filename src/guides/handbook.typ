@@ -1,4 +1,4 @@
-#set document(author: "hola")
+#set document(author: "Facultad de Ingeniería · UPSA")
 #set page(paper: "a4", numbering: "1")
 #set text(lang: "es", region: "bo")
 
@@ -7,7 +7,7 @@
 #include "overview.html.typ"
 
 #{
-  heading(level: 1)[Cómo escribir tu tesis con Typst]
+  heading(level: 1)[Cómo escribir tu documento de grado con Typst]
   set heading(offset: 1)
   include "typst.html.typ"
 }

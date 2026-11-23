@@ -19,7 +19,7 @@ const current = Astro.url.pathname.replace(/\/$/, '');
     <header>
       <div class="bar">
         <a class="brand" href={home}>FAI · UPSA</a>
-        <nav aria-label="Guía de tesis">
+        <nav aria-label="Guía para documentos de grado">
           <a href={home} aria-current={current === base ? 'page' : undefined}>Inicio</a>
           <a href={typst} aria-current={current === typst.slice(0, -1) ? 'page' : undefined}>Typst</a>
         </nav>
