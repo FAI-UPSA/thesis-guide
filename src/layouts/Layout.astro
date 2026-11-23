@@ -7,7 +7,7 @@ const current = Astro.url.pathname.replace(/\/$/, '');
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es-BO">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,19 +19,19 @@ const current = Astro.url.pathname.replace(/\/$/, '');
     <header>
       <div class="bar">
         <a class="brand" href={home}>FAI · UPSA</a>
-        <nav aria-label="Thesis guide">
-          <a href={home} aria-current={current === base ? 'page' : undefined}>Overview</a>
+        <nav aria-label="Guía para documentos de grado">
+          <a href={home} aria-current={current === base ? 'page' : undefined}>Inicio</a>
           <a href={typst} aria-current={current === typst.slice(0, -1) ? 'page' : undefined}>Typst</a>
         </nav>
-        <a class="download" href={`${base}/thesis-guide.pdf`} download>Download PDF</a>
+        <a class="download" href={`${base}/thesis-guide.pdf`} download>Descargar PDF</a>
       </div>
     </header>
     <main>
       <article><slot /></article>
       <footer>
         {current === base
-          ? <a href={typst}>Continue to the Typst guide →</a>
-          : <a href={home}>← Return to the thesis overview</a>}
+          ? <a href={typst}>Seguí con la guía de Typst →</a>
+          : <a href={home}>← Volvé al inicio</a>}
       </footer>
     </main>
   </body>

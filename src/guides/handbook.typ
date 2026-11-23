@@ -1,12 +1,15 @@
-#set document(title: "Thesis authoring guide")
-#set page(paper: "a4", margin: 25mm, numbering: "1")
-#set text(lang: "en", size: 11pt)
-// Reference pages:
-// - https://web.mit.edu/thesis/tex/ (for dedicated templates)
-//   - https://libraries.mit.edu/distinctive-collections/thesis-specs/ (for specification-style thesis guidelines or requirements)
-// - https://www.sydney.edu.au/research/graduate-research/current-students/thesis-and-examination/preparing-your-thesis.html (for general guidance)
-// - https://www.aalto.fi/en/services/creating-a-pdfa-compliant-file-of-your-thesis (for PDF/A compliance)
+#set document(author: "Facultad de Ingeniería · UPSA")
+#set page(paper: "a4", numbering: "1")
+#set text(lang: "es", region: "bo")
+
+#show title: set align(center)
 
 #include "overview.html.typ"
-#pagebreak()
-#include "typst.html.typ"
+
+#{
+  heading(level: 1)[Cómo escribir tu documento de grado con Typst]
+  set heading(offset: 1)
+  include "typst.html.typ"
+}
+
+#bibliography("ref.hay.yaml", full: true)
